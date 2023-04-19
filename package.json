@@ -6,16 +6,21 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "dotenv": "^16.0.3",
+    "ethers": "5.4.7",
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "solc": "^0.8.19",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "compile": "yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . src/contracts/Coin.sol src/contracts/LoanRequest.sol src/contracts/Loan.sol"
   },
   "eslintConfig": {
     "extends": [
